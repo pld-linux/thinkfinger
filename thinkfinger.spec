@@ -41,6 +41,7 @@ Statyczne biblioteki thinkfinger.
 %package -n pam-pam_thinkfinger
 Summary:	A PAM module - thinkfinger
 Group:		Base
+Requires:	%{name} = %{version}-%{release}
 
 %description -n pam-pam_thinkfinger
 A PAM module - thinkfinger.
@@ -71,6 +72,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc NEWS README
 %attr(755,root,root) %{_sbindir}/*
 %attr(755,root,root) %{_libdir}/*.so.*
+%dir %{_sysconfdir}/pam_thinkfinger
 
 %files devel
 %defattr(644,root,root,755)
@@ -85,5 +87,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n pam-pam_thinkfinger
 %defattr(644,root,root,755)
-%dir %{_sysconfdir}/pam_thinkfinger
 %attr(755,root,root) /%{_lib}/security/*.so
