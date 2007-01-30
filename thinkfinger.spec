@@ -7,6 +7,7 @@ Group:		Base
 Source0:	http://dl.sourceforge.net/thinkfinger/%{name}-%{version}.tar.gz
 # Source0-md5:	d6d9771faf8c6b768449e0b415be2dde
 URL:		http://thinkfinger.sourceforge.net
+BuildRequires:	libusb-devel
 BuildRequires:	pam-devel >= 0.99.1.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
