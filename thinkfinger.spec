@@ -17,26 +17,26 @@ fingerprint reader found in most IBM/Lenovo ThinkPads.
 
 %package devel
 Summary:	Header files for thinkfinger
-Summary(pl):	Pliki nag≥Ûwkowe thinkfinger
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe thinkfinger
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for thinkfinger.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe thinkfinger.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe thinkfinger.
 
 %package static
 Summary:	Static thinkfinger libraries
-Summary(pl):	Statyczne biblioteki thinkfinger
+Summary(pl.UTF-8):   Statyczne biblioteki thinkfinger
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static thinkfinger libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczne biblioteki thinkfinger.
 
 %package -n pam-pam_thinkfinger
