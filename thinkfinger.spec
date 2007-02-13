@@ -1,4 +1,5 @@
 Summary:	Driver for SGS Thomson fingerprint reader
+Summary(pl.UTF-8):	Sterownik do czytników odcisków palców SGS Thomson
 Name:		thinkfinger
 Version:	0.2.1
 Release:	0.1
@@ -14,6 +15,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 ThinkFinger is a driver for the SGS Thomson Microelectronics
 fingerprint reader found in most IBM/Lenovo ThinkPads.
+
+%description -l pl.UTF-8
+ThinkFinger to sterownik do czytników odcisków palców SGS Thomson
+Microelectronics, jakie można znaleźć w większości ThinkPadów
+IBM/Lenovo.
 
 %package devel
 Summary:	Header files for thinkfinger
@@ -41,11 +47,15 @@ Statyczne biblioteki thinkfinger.
 
 %package -n pam-pam_thinkfinger
 Summary:	A PAM module - thinkfinger
+Summary(pl.UTF-8):	Moduł PAM thinkfinger
 Group:		Base
 Requires:	%{name} = %{version}-%{release}
 
 %description -n pam-pam_thinkfinger
 A PAM module - thinkfinger.
+
+%description -n pam-pam_thinkfinger -l pl.UTF-8
+Moduł PAM thinkfinger.
 
 %prep
 %setup -q
@@ -65,26 +75,27 @@ install -d $RPM_BUILD_ROOT%{_sysconfdir}/pam_thinkfinger
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
+%post	-p /sbin/ldconfig
+%postun	-p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
 %doc NEWS README
 %attr(755,root,root) %{_sbindir}/*
-%attr(755,root,root) %{_libdir}/*.so.*
+%attr(755,root,root) %{_libdir}/*.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/*.so.?
 %dir %{_sysconfdir}/pam_thinkfinger
 
 %files devel
 %defattr(644,root,root,755)
-%{_pkgconfigdir}/*.pc
+%attr(755,root,root) %{_libdir}/*.so
 %{_libdir}/*.la
 %{_includedir}/%{name}
-%attr(755,root,root) %{_libdir}/*.so
+%{_pkgconfigdir}/*.pc
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/*.la
+%{_libdir}/*.a
 
 %files -n pam-pam_thinkfinger
 %defattr(644,root,root,755)
