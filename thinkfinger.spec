@@ -1,12 +1,12 @@
 Summary:	Driver for SGS Thomson fingerprint reader
 Summary(pl.UTF-8):	Sterownik do czytników odcisków palców SGS Thomson
 Name:		thinkfinger
-Version:	0.2.1
+Version:	0.2.2
 Release:	0.1
 License:	GPL
 Group:		Base
 Source0:	http://dl.sourceforge.net/thinkfinger/%{name}-%{version}.tar.gz
-# Source0-md5:	d6d9771faf8c6b768449e0b415be2dde
+# Source0-md5:	82c3b74c369fc231379d48af9e8ff851
 URL:		http://thinkfinger.sourceforge.net
 BuildRequires:	libusb-devel
 BuildRequires:	pam-devel >= 0.99.1.0
@@ -85,12 +85,13 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/*.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/*.so.?
 %dir %{_sysconfdir}/pam_thinkfinger
+%{_mandir}/man1/tf-tool.1*
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/*.so
 %{_libdir}/*.la
-%{_includedir}/%{name}
+%{_includedir}/libthinkfinger.h
 %{_pkgconfigdir}/*.pc
 
 %files static
@@ -100,3 +101,4 @@ rm -rf $RPM_BUILD_ROOT
 %files -n pam-pam_thinkfinger
 %defattr(644,root,root,755)
 %attr(755,root,root) /%{_lib}/security/*.so
+%{_mandir}/man8/pam_thinkfinger.8*
