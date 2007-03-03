@@ -66,6 +66,8 @@ Moduł PAM thinkfinger.
 	--enable-pam \
 	--with-securedir=/%{_lib}/security
 
+%{__make}
+
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_sysconfdir}/pam_thinkfinger
