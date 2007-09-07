@@ -10,6 +10,7 @@ Source0:	http://dl.sourceforge.net/thinkfinger/%{name}-%{version}.tar.gz
 URL:		http://thinkfinger.sourceforge.net
 BuildRequires:	libusb-devel
 BuildRequires:	pam-devel >= 0.99.1.0
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
