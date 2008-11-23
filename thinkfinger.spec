@@ -1,5 +1,5 @@
 Summary:	Driver for SGS Thomson fingerprint reader
-Summary(pl.UTF-8):	Sterownik do czytników odcisków palców SGS Thomson
+Summary(pl.UTF-8):	Sterownik do czytników linii papilarnych SGS Thomson
 Name:		thinkfinger
 Version:	0.3
 Release:	2
@@ -18,7 +18,7 @@ ThinkFinger is a driver for the SGS Thomson Microelectronics
 fingerprint reader found in most IBM/Lenovo ThinkPads.
 
 %description -l pl.UTF-8
-ThinkFinger to sterownik do czytników odcisków palców SGS Thomson
+ThinkFinger to sterownik do czytników linii papilarnych SGS Thomson
 Microelectronics, jakie można znaleźć w większości ThinkPadów
 IBM/Lenovo.
 
