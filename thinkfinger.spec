@@ -2,7 +2,7 @@ Summary:	Driver for SGS Thomson fingerprint reader
 Summary(pl.UTF-8):	Sterownik do czytników linii papilarnych SGS Thomson
 Name:		thinkfinger
 Version:	0.3
-Release:	2
+Release:	3
 License:	GPL
 Group:		Base
 Source0:	http://dl.sourceforge.net/thinkfinger/%{name}-%{version}.tar.gz
@@ -85,24 +85,24 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc NEWS README
-%attr(755,root,root) %{_sbindir}/*
-%attr(755,root,root) %{_libdir}/*.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/*.so.?
+%attr(755,root,root) %{_sbindir}/tf-tool
+%attr(755,root,root) %{_libdir}/libthinkfinger.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libthinkfinger.so.0
 %dir %{_sysconfdir}/pam_thinkfinger
 %{_mandir}/man1/tf-tool.1*
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/*.so
-%{_libdir}/*.la
+%attr(755,root,root) %{_libdir}/libthinkfinger.so
+%{_libdir}/libthinkfinger.la
 %{_includedir}/libthinkfinger.h
-%{_pkgconfigdir}/*.pc
+%{_pkgconfigdir}/libthinkfinger.pc
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/*.a
+%{_libdir}/libthinkfinger.a
 
 %files -n pam-pam_thinkfinger
 %defattr(644,root,root,755)
-%attr(755,root,root) /%{_lib}/security/*.so
+%attr(755,root,root) /%{_lib}/security/pam_thinkfinger.so
 %{_mandir}/man8/pam_thinkfinger.8*
