@@ -2,12 +2,14 @@ Summary:	Driver for SGS Thomson fingerprint reader
 Summary(pl.UTF-8):	Sterownik do czytników linii papilarnych SGS Thomson
 Name:		thinkfinger
 Version:	0.3
-Release:	3
+Release:	4
 License:	GPL
 Group:		Base
 Source0:	http://dl.sourceforge.net/thinkfinger/%{name}-%{version}.tar.gz
 # Source0-md5:	588565233bcbea5ff0a7f5314361c380
 URL:		http://thinkfinger.sourceforge.net
+Patch0:		%{name}-timeout.patch
+Patch1:		%{name}-syncevent.patch
 BuildRequires:	libusb-devel
 BuildRequires:	pam-devel >= 0.99.1.0
 BuildRequires:	pkgconfig
@@ -61,6 +63,8 @@ Moduł PAM thinkfinger.
 
 %prep
 %setup -q
+%patch0 -p1
+%patch1 -p0
 
 %build
 %configure \

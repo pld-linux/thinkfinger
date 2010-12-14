@@ -1,0 +1,11 @@
+--- thinkfinger-0.3/libthinkfinger/libthinkfinger.c.orig	2010-12-12 22:59:59.745793000 +0100
++++ thinkfinger-0.3/libthinkfinger/libthinkfinger.c	2010-12-12 23:00:12.105793000 +0100
+@@ -35,7 +35,7 @@
+ 
+ #define USB_VENDOR_ID     0x0483
+ #define USB_PRODUCT_ID    0x2016
+-#define USB_TIMEOUT       5000
++#define USB_TIMEOUT       10
+ #define USB_WR_EP         0x02
+ #define USB_RD_EP         0x81
+ #define DEFAULT_BULK_SIZE 0x40
