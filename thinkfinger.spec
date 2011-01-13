@@ -1,3 +1,5 @@
+# NOTE: dead package, use fprint instead
+# see http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=546005
 Summary:	Driver for SGS Thomson fingerprint reader
 Summary(pl.UTF-8):	Sterownik do czytników linii papilarnych SGS Thomson
 Name:		thinkfinger
